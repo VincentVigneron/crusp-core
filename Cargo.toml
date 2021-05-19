@@ -1,0 +1,7 @@
+[package]
+name = "crusp-core"
+version = "0.0.1"
+authors = ["Vincent Vigneron <vigneron.vincent.49@gmail.com>"]
+edition = "2018"
+
+[dependencies]
