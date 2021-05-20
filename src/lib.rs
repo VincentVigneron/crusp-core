@@ -1,3 +1,10 @@
+
+#[derive(Clone, Copy, Debug, Hash, PartialEq, Eq, PartialOrd, Ord)]
+pub struct VariableId(usize);
+
+#[derive(Clone, Copy, Debug, Hash, PartialEq, Eq, PartialOrd, Ord)]
+pub struct ConstraintId(usize);
+
 pub trait Subsumed {
     fn is_subsumed_under(&self, val: &Self) -> bool;
 }
