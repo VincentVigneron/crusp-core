@@ -5,15 +5,15 @@ pub struct VariableId(usize);
 #[derive(Clone, Copy, Debug, Hash, PartialEq, Eq, PartialOrd, Ord)]
 pub struct ConstraintId(usize);
 
-impl From<usize> for VariableId {
-    fn from(idx: usize) -> Self {
-        VariableId(idx)
+impl From<VariableId> for usize {
+    fn from(idx: VariableId) -> Self {
+        idx.0
     }
 }
 
-impl From<usize> for ConstraintId {
-    fn from(idx: usize) -> Self {
-        ConstraintId(idx)
+impl From<ConstraintId> for usize {
+    fn from(idx: ConstraintId) -> Self {
+        idx.0
     }
 }
 
