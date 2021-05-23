@@ -20,14 +20,14 @@ impl From<ConstraintId> for usize {
 }
 
 impl From<usize> for VariableId {
-    fn from(idx: VariausizebleId) -> Self {
-        idx.0
+    fn from(idx: usize) -> Self {
+        VariableId(idx)
     }
 }
 
 impl From<usize> for ConstraintId {
     fn from(idx: usize) -> Self {
-        idx.0
+        ConstraintId(idx)
     }
 }
 
