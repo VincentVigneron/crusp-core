@@ -5,6 +5,18 @@ pub struct VariableId(usize);
 #[derive(Clone, Copy, Debug, Hash, PartialEq, Eq, PartialOrd, Ord)]
 pub struct ConstraintId(usize);
 
+impl From<usize> for VariableId {
+    fn from(idx: usize) -> Self {
+        VariableId(idx)
+    }
+}
+
+impl From<usize> for ConstraintId {
+    fn from(idx: usize) -> Self {
+        ConstraintId(idx)
+    }
+}
+
 pub trait Subsumed {
     fn is_subsumed_under(&self, val: &Self) -> bool;
 }
