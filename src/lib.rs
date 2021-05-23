@@ -1,3 +1,5 @@
+use std::usize;
+
 
 #[derive(Clone, Copy, Debug, Hash, PartialEq, Eq, PartialOrd, Ord)]
 pub struct VariableId(usize);
@@ -13,6 +15,18 @@ impl From<VariableId> for usize {
 
 impl From<ConstraintId> for usize {
     fn from(idx: ConstraintId) -> Self {
+        idx.0
+    }
+}
+
+impl From<usize> for VariableId {
+    fn from(idx: VariausizebleId) -> Self {
+        idx.0
+    }
+}
+
+impl From<usize> for ConstraintId {
+    fn from(idx: usize) -> Self {
         idx.0
     }
 }
